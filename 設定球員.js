@@ -181,7 +181,7 @@ function check(team,batter)
         {
             if((target.value=="請選擇守位"))
             {
-
+                
             }
             else
             {
