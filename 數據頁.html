@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <title>紀錄表</title>
+    
+        <style type="text/css"> 
+        body{
+            width: 90%;
+        }
+            table{
+                border-collapse: collapse;
+            }
+            td{
+                height: 40px;
+                width: 73px;
+                text-align: center;
+                border-top:none ;
+                border-left:none ;
+            }
+            div2,div3{
+                margin: auto;
+                display: inline-block;
+            }
+            a{
+                color:red;
+            }
+            .b{
+                text-decoration: underline;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="mydata.js"></script>
+        <script src="data.js"></script>
+        
+        <script>
+            function doclick(t,x,y){
+                if(t==1){
+                    document.getElementById("inning_Ateam").value = x;
+                    document.getElementById("batter_Ateam").value = y;
+                }
+                else{
+                    document.getElementById("inning_Bteam").value = x;
+                    document.getElementById("batter_Bteam").value = y;
+                }
+                var obj = JSON.parse(localStorage.getItem(t+x+y));
+            }
+            
+        </script>
+    </head>
+    <body>
+        
+        <a href="file:///C:/Users/acer/Desktop/ex1/Home.html"><img style="width:60px;" src="back.png"></a>
+        <center><h id="date">123</h></center>
+    <div id="change_to_pdf">
+        <table border="1" style="  margin: auto;">
+            <thead >
+                <tr>
+                    <td >對戰隊伍</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>總分</td>
+                    <td>安打</td>
+                    <td>失誤</td>
+                    
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td id="second team"></td>
+                    <td id="21R"></td>
+                    <td id="22R"></td>
+                    <td id="23R"></td>
+                    <td id="24R"></td>
+                    <td id="25R"></td>
+                    <td id="26R"></td>
+                    <td id="27R"></td>
+                    <td id="2R"></td>
+                    <td id="2H"></td>
+                    <td id="2E"></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr >
+                    <td id="first team"></td>
+                    <td id="11R"></td>
+                    <td id="12R"></td>
+                    <td id="13R"></td>
+                    <td id="14R"></td>
+                    <td id="15R"></td>
+                    <td id="16R"></td>
+                    <td id="17R"></td>
+                    <td id="1R"></td>
+                    <td id="1H"></td>
+                    <td id="1E"></td>
+                </tr>
+            </tbody>
+        </table>
+       
+        <hr>
+        <div4 style="  margin: auto;">
+        <div2 >
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>背號</td><td>守位</td><td>1</td><td>2</td> <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <td id="firstteamplayer10"></td>
+                    <td id="firstteamplayer10place"></td>
+                    <td id="1110" onclick="doclick(1,1,10)"></td>
+                    <td id="1210" onclick="doclick(1,2,10)"></td>
+                    <td id="1310" onclick="doclick(1,3,10)"></td>
+                    <td id="1410" onclick="doclick(1,4,10)"></td>
+                    <td id="1510" onclick="doclick(1,5,10)"></td>
+                    <td id="1610" onclick="doclick(1,6,10)"></td>
+                    <td id="1710" onclick="doclick(1,7,10)"></td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr >
+                    <td id="firstteamplayer1"></td>
+                    <td id="firstteamplayer1place"></td>
+                    <td id="111" onclick="doclick(1,1,1)"></td>
+                    <td id="121" onclick="doclick(1,2,1)"></td>
+                    <td id="131" onclick="doclick(1,3,1)"></td>
+                    <td id="141" onclick="doclick(1,4,1)"></td>
+                    <td id="151" onclick="doclick(1,5,1)"></td>
+                    <td id="161" onclick="doclick(1,6,1)"></td>
+                    <td id="171" onclick="doclick(1,7,1)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer2"></td>
+                    <td id="firstteamplayer2place"></td>
+                    <td id="112" onclick="doclick(1,1,2)"></td>
+                    <td id="122" onclick="doclick(1,2,2)"></td>
+                    <td id="132" onclick="doclick(1,3,2)"></td>
+                    <td id="142" onclick="doclick(1,4,2)"></td>
+                    <td id="152" onclick="doclick(1,5,2)"></td>
+                    <td id="162" onclick="doclick(1,6,2)"></td>
+                    <td id="172" onclick="doclick(1,7,2)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer3"></td>
+                    <td id="firstteamplayer3place"></td>
+                    <td id="113" onclick="doclick(1,1,3)"></td>
+                    <td id="123" onclick="doclick(1,2,3)"></td>
+                    <td id="133" onclick="doclick(1,3,3)"></td>
+                    <td id="143" onclick="doclick(1,4,3)"></td>
+                    <td id="153" onclick="doclick(1,5,3)"></td>
+                    <td id="163" onclick="doclick(1,6,3)"></td>
+                    <td id="173" onclick="doclick(1,7,3)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer4"></td>
+                    <td id="firstteamplayer4place"></td>
+                    <td id="114" onclick="doclick(1,1,4)"></td>
+                    <td id="124" onclick="doclick(1,2,4)"></td>
+                    <td id="134" onclick="doclick(1,3,4)"></td>
+                    <td id="144" onclick="doclick(1,4,4)"></td>
+                    <td id="154" onclick="doclick(1,5,4)"></td>
+                    <td id="164" onclick="doclick(1,6,4)"></td>
+                    <td id="174" onclick="doclick(1,7,4)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer5"></td>
+                    <td id="firstteamplayer5place"></td>
+                    <td id="115" onclick="doclick(1,1,5)"></td>
+                    <td id="125" onclick="doclick(1,2,5)"></td>
+                    <td id="135" onclick="doclick(1,3,5)"></td>
+                    <td id="145" onclick="doclick(1,4,5)"></td>
+                    <td id="155" onclick="doclick(1,5,5)"></td>
+                    <td id="165" onclick="doclick(1,6,5)"></td>
+                    <td id="175" onclick="doclick(1,7,5)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer6"></td>
+                    <td id="firstteamplayer6place"></td>
+                    <td id="116" onclick="doclick(1,1,6)"></td>
+                    <td id="126" onclick="doclick(1,2,6)"></td>
+                    <td id="136" onclick="doclick(1,3,6)"></td>
+                    <td id="146" onclick="doclick(1,4,6)"></td>
+                    <td id="156" onclick="doclick(1,5,6)"></td>
+                    <td id="166" onclick="doclick(1,6,6)"></td>
+                    <td id="176" onclick="doclick(1,7,6)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer7"></td>
+                    <td id="firstteamplayer7place"></td>
+                    <td id="117" onclick="doclick(1,1,7)"></td>
+                    <td id="127" onclick="doclick(1,2,7)"></td>
+                    <td id="137" onclick="doclick(1,3,7)"></td>
+                    <td id="147" onclick="doclick(1,4,7)"></td>
+                    <td id="157" onclick="doclick(1,5,7)"></td>
+                    <td id="167" onclick="doclick(1,6,7)"></td>
+                    <td id="177" onclick="doclick(1,7,7)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer8"></td>
+                    <td id="firstteamplayer8place"></td>
+                    <td id="118" onclick="doclick(1,1,8)"></td>
+                    <td id="128" onclick="doclick(1,2,8)"></td>
+                    <td id="138" onclick="doclick(1,3,8)"></td>
+                    <td id="148" onclick="doclick(1,4,8)"></td>
+                    <td id="158" onclick="doclick(1,5,8)"></td>
+                    <td id="168" onclick="doclick(1,6,8)"></td>
+                    <td id="178" onclick="doclick(1,7,8)"></td>
+                </tr>
+                <tr >
+                    <td id="firstteamplayer9"></td>
+                    <td id="firstteamplayer9place"></td>
+                    <td id="119" onclick="doclick(1,1,9)"></td>
+                    <td id="129" onclick="doclick(1,2,9)"></td>
+                    <td id="139" onclick="doclick(1,3,9)"></td>
+                    <td id="149" onclick="doclick(1,4,9)"></td>
+                    <td id="159" onclick="doclick(1,5,9)"></td>
+                    <td id="169" onclick="doclick(1,6,9)"></td>
+                    <td id="179" onclick="doclick(1,7,9)"></td>
+                </tr>
+               
+            </tbody>
+        </table>
+        </div2>
+        <div2 >
+            <p><center>
+                第<input id="inning_Ateam" type="number" min="1" max="7" step="1" value="1" >局
+                <input id="batter_Ateam" type="number" min="1" max="10" step="1" value="1">棒
+                <br>
+                <p>
+                    方向：<br>
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="LF">LF 
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="CF">CF 
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="RF">RF
+                </p>
+                <p>
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="2B">2B 
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="SF">SF
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="SS">SS
+                </p>
+                <p>
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="3B">3B
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="P">P
+                    <input type="radio" id="way_Ateam" name="way_Ateam" value="1B">1B 
+                </p>
+                <p><input type="radio" id="way_Ateam" name="way_Ateam" value="C">C</p>
+                <p> 
+                    結果:<br>
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="H" >H
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="FO">FO
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="GO">GO
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="E">E
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="BB">BB
+                    <br>
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="FC">FC
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="DP">DP
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="TP">TP
+                    <br>
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="K">K
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="界K">界Ｋ
+                    <input type="radio" id="end_Ateam" name="end_Ateam" value="揮K">揮Ｋ
+                    <br>
+                    +
+                    <br>
+                    <input type="checkbox" id="RunnerError_Ateam" name="RunnerError_Ateam" value="RE">Runner Error
+                </p>
+                <p>得<input type="number" id="Ateam_R" min="0" value="0">分</p> 
+                <p><input type="button" id="ok_1st_inning" value="OK"> <input type="button" id="clear_1st_inning" value="clear"></p>
+                <hr>
+                <label>
+                    <ul><input id="replace1" type="checkbox" >換人
+                        背號：<input id="replace1number" type="number">     
+                        守位:<select id="replace1place"><option>請選擇守位</option><option>P</option><option>C</option><option>1B</option><option>2B</option><option>3B</option><option>SS</option><option>SF</option><option>CF</option><option>RF</option><option>LF</option></select>
+                    </ul>
+                    
+                </label>
+            </center></p>
+        </div2>
+        </div4>
+        <div id="display1">換人：</div>
+        <div id="Display1"></div>
+        <hr>
+        <div5 style="  margin: auto;">
+        <div3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <td>背號</td><td>守位</td><td>1</td><td>2</td> <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td id="secondteamplayer10"></td>
+                        <td id="secondteamplayer10place"></td>
+                        <td id="2110" onclick="doclick(2,1,10)"></td>
+                        <td id="2210" onclick="doclick(2,2,10)"></td>
+                        <td id="2310" onclick="doclick(2,3,10)"></td>
+                        <td id="2410" onclick="doclick(2,4,10)"></td>
+                        <td id="2510" onclick="doclick(2,5,10)"></td>
+                        <td id="2610" onclick="doclick(2,6,10)"></td>
+                        <td id="2710" onclick="doclick(2,7,10)"></td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr >
+                        <td id="secondteamplayer1"></td>
+                        <td id="secondteamplayer1place"></td>
+                        <td id="211" onclick="doclick(2,1,1)"></td>
+                        <td id="221" onclick="doclick(2,2,1)"></td>
+                        <td id="231" onclick="doclick(2,3,1)"></td>
+                        <td id="241" onclick="doclick(2,4,1)"></td>
+                        <td id="251" onclick="doclick(2,5,1)"></td>
+                        <td id="261" onclick="doclick(2,6,1)"></td>
+                        <td id="271" onclick="doclick(2,7,1)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer2"></td>
+                        <td id="secondteamplayer2place"></td>
+                        <td id="212" onclick="doclick(2,1,2)"></td>
+                        <td id="222" onclick="doclick(2,2,2)"></td>
+                        <td id="232" onclick="doclick(2,3,2)"></td>
+                        <td id="242" onclick="doclick(2,4,2)"></td>
+                        <td id="252" onclick="doclick(2,5,2)"></td>
+                        <td id="262" onclick="doclick(2,6,2)"></td>
+                        <td id="272" onclick="doclick(2,7,2)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer3"></td>
+                        <td id="secondteamplayer3place"></td>
+                        <td id="213" onclick="doclick(2,1,3)"></td>
+                        <td id="223" onclick="doclick(2,2,3)"></td>
+                        <td id="233" onclick="doclick(2,3,3)"></td>
+                        <td id="243" onclick="doclick(2,4,3)"></td>
+                        <td id="253" onclick="doclick(2,5,3)"></td>
+                        <td id="263" onclick="doclick(2,6,3)"></td>
+                        <td id="273" onclick="doclick(2,7,3)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer4"></td>
+                        <td id="secondteamplayer4place"></td>
+                        <td id="214" onclick="doclick(2,1,4)"></td>
+                        <td id="224" onclick="doclick(2,2,4)"></td>
+                        <td id="234" onclick="doclick(2,3,4)"></td>
+                        <td id="244" onclick="doclick(2,4,4)"></td>
+                        <td id="254" onclick="doclick(2,5,4)"></td>
+                        <td id="264" onclick="doclick(2,6,4)"></td>
+                        <td id="274" onclick="doclick(2,7,4)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer5"></td>
+                        <td id="secondteamplayer5place"></td>
+                        <td id="215" onclick="doclick(2,1,5)"></td>
+                        <td id="225" onclick="doclick(2,2,5)"></td>
+                        <td id="235" onclick="doclick(2,3,5)"></td>
+                        <td id="245" onclick="doclick(2,4,5)"></td>
+                        <td id="255" onclick="doclick(2,5,5)"></td>
+                        <td id="265" onclick="doclick(2,6,5)"></td>
+                        <td id="275" onclick="doclick(2,7,5)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer6"></td>
+                        <td id="secondteamplayer6place"></td>
+                        <td id="216" onclick="doclick(2,1,6)"></td>
+                        <td id="226" onclick="doclick(2,2,6)"></td>
+                        <td id="236" onclick="doclick(2,3,6)"></td>
+                        <td id="246" onclick="doclick(2,4,6)"></td>
+                        <td id="256" onclick="doclick(2,5,6)"></td>
+                        <td id="266" onclick="doclick(2,6,6)"></td>
+                        <td id="276" onclick="doclick(2,7,6)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer7"></td>
+                        <td id="secondteamplayer7place"></td>
+                        <td id="217" onclick="doclick(2,1,7)"></td>
+                        <td id="227" onclick="doclick(2,2,7)"></td>
+                        <td id="237" onclick="doclick(2,3,7)"></td>
+                        <td id="247" onclick="doclick(2,4,7)"></td>
+                        <td id="257" onclick="doclick(2,5,7)"></td>
+                        <td id="267" onclick="doclick(2,6,7)"></td>
+                        <td id="277" onclick="doclick(2,7,7)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer8"></td>
+                        <td id="secondteamplayer8place"></td>
+                        <td id="218" onclick="doclick(2,1,8)"></td>
+                        <td id="228" onclick="doclick(2,2,8)"></td>
+                        <td id="238" onclick="doclick(2,3,8)"></td>
+                        <td id="248" onclick="doclick(2,4,8)"></td>
+                        <td id="258" onclick="doclick(2,5,8)"></td>
+                        <td id="268" onclick="doclick(2,6,8)"></td>
+                        <td id="278" onclick="doclick(2,7,8)"></td>
+                    </tr>
+                    <tr >
+                        <td id="secondteamplayer9"></td>
+                        <td id="secondteamplayer9place"></td>
+                        <td id="219" onclick="doclick(2,1,9)"></td>
+                        <td id="229" onclick="doclick(2,2,9)"></td>
+                        <td id="239" onclick="doclick(2,3,9)"></td>
+                        <td id="249" onclick="doclick(2,4,9)"></td>
+                        <td id="259" onclick="doclick(2,5,9)"></td>
+                        <td id="269" onclick="doclick(2,6,9)"></td>
+                        <td id="279" onclick="doclick(2,7,9)"></td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div3>
+        <div3>
+            <p><center>
+                第<input id="inning_Bteam" type="number" min="1" max="7" step="1" value="1" >局
+                <input id="batter_Bteam" type="number" min="1" max="10" step="1" value="1">棒
+                <br>
+                <p>
+                    方向：<br>
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="LF">LF 
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="CF">CF 
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="RF">RF
+                </p>
+                <p>
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="2B">2B 
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="SF">SF
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="SS">SS
+                </p>
+                <p>
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="3B">3B
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="P">P
+                    <input type="radio" id="way_Bteam" name="way_Bteam" value="1B">1B 
+                </p>
+                <p><input type="radio" id="way_Bteam" name="way_Bteam" value="C">C</p>
+                <p> 
+                    結果:<br>
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="H" >H
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="FO">FO
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="GO">GO
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="E">E
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="BB">BB
+                    <br>
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="FC">FC
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="DP">DP
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="TP">TP
+                    <br>
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="K">K
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="界K">界Ｋ
+                    <input type="radio" id="end_Bteam" name="end_Bteam" value="揮K">揮Ｋ
+                    <br>
+                    +
+                    <br>
+                    <input type="checkbox" id="RunnerError_Bteam" name="RunnerError_Bteam" value="RE">Runner Error
+                </p>
+                <p>得<input type="number" id="Bteam_R" min="0" value="0">分</p> 
+                <p><input type="button" id="ok_2nd_inning" value="OK"> <input type="button" id="clear_2nd_inning" value="clear"></p>
+                <hr>
+                <label>
+                    <ul><input id="replace2" type="checkbox">換人
+                        背號：<input id="replace2number" type="number">     
+                        守位:<select id="replace2place"><option>請選擇守位</option><option>P</option><option>C</option><option>1B</option><option>2B</option><option>3B</option><option>SS</option><option>SF</option><option>CF</option><option>RF</option><option>LF</option></select>
+                    </ul>
+                    
+                </label>
+            </center></p>
+            
+        </div3>
+        </div5>
+        <div id="display2">換人：</div>
+        <div id="Display2"></div>
+        <hr>
+        <center><input id ="clear" type="button" value="Clear"></center>
+    </div>
+    </body>
+</html>
