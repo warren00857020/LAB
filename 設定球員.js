@@ -244,7 +244,7 @@ $(document).ready(
                             {
                                 $("#movebaseball").attr("style","display:none;")
                                 alert("比賽開打!");
-                                window.location.href="file:///C:/Users/acer/Desktop/ex1/Home.html";
+                                window.location.href="https://warren00857020.github.io/LAB/Home.html";
                             },2000)
                         },1000)
                     },3000)},2000)})})
